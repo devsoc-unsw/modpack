@@ -1,12 +1,12 @@
 name = "DevSoc Modpack"
 author = "DevSoc"
-version = "1.0.1"
+version = "1.1.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "225fa92154903ed432fa10769f0e8f0d7b041964bf9393da226e6733a47e5491"
+hash = "4046349543103e1d58c9aa189a7f83f7959dfa1cd23c6b1d4d0889a42739132a"
 
 [versions]
 fabric = "0.19.3"

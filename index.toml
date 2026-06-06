@@ -1,6 +1,22 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/modpack_defaults/config/cape-provider/config.json"
+hash = "bfaed4a90f4b3b2ddb8fce57a7c4d9d2011a154c7f6bd8f005e79dff8ead6230"
+
+[[files]]
+file = "config/modpack_defaults/config/inventoryprofilesnext/inventoryprofiles.json"
+hash = "da67e13cf540176496418097d28c5e7ea032f06326279ef17ed3857dc7898d21"
+
+[[files]]
+file = "config/modpack_defaults/config/sodium-extra-options.json"
+hash = "6c02a3834146f91beeb4baa7a25abdfbbe7a9879ed53399465c17f7f61924801"
+
+[[files]]
+file = "config/modpack_defaults/config/sodium-shadowy-path-blocks-options.json"
+hash = "4773ede8076bdbcfb6b8ea3de058a56120aa7438ee6b25de297c10aa8f5ce393"
+
+[[files]]
 file = "mods/3dskinlayers.pw.toml"
 hash = "8c8f44ed74ea93a496ac1d476ab71b59b0b15a780d5ab60e5559ef637105ee6d"
 metafile = true
@@ -63,6 +79,11 @@ metafile = true
 [[files]]
 file = "mods/collective.pw.toml"
 hash = "6f8497356da66a9100d4250d98785cd15fb69dc28290d2a69ccbe8bcfbc0b2af"
+metafile = true
+
+[[files]]
+file = "mods/configmanager.pw.toml"
+hash = "448f56f00955f708d4d15ce3a9d94753516646bb2314fcad8c95e80b826eea2c"
 metafile = true
 
 [[files]]
