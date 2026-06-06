@@ -1,0 +1,24 @@
+name: Release
+on:
+  push:
+    tags:
+      - "v*.*.*"
+jobs:
+  create_release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.26"
+      - name: Build Packwiz
+        run: go install github.com/packwiz/packwiz@latest
+      - name: Build modpack
+        run: packwiz modrinth export
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: "DevSoc Modpack-*.zip"
