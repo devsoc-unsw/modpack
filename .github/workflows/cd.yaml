@@ -22,3 +22,5 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           files: "DevSoc Modpack-*.zip"
+permissions:
+  contents: write
