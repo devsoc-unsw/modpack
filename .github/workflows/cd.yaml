@@ -14,8 +14,23 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: "1.26"
+          cache: false
+      - name: Get Go cache paths
+        id: go-cache
+        run: |
+          echo "gomodcache=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
+          echo "gocache=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
+      - name: Cache Go build/module cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ steps.go-cache.outputs.gomodcache }}
+            ${{ steps.go-cache.outputs.gocache }}
+          key: ${{ runner.os }}-go-packwiz-${{ env.PACKWIZ_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-go-packwiz-
       - name: Build Packwiz
-        run: go install github.com/packwiz/packwiz@latest
+        run: go install github.com/packwiz/packwiz@${{ env.PACKWIZ_VERSION }}
       - name: Build modpack
         run: packwiz modrinth export
       - name: Create GitHub Release
@@ -24,3 +39,5 @@ jobs:
           files: "DevSoc Modpack-*.mrpack"
 permissions:
   contents: write
+env:
+  PACKWIZ_VERSION: dfd8b68
