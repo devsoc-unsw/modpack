@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "LICENSE"
+hash = "e85037cb2ab3f22abc9abaf8cd278a07737f0440c0bfe77bfe2f51fddc000c72"
+
+[[files]]
 file = "mods/3dskinlayers.pw.toml"
 hash = "8c8f44ed74ea93a496ac1d476ab71b59b0b15a780d5ab60e5559ef637105ee6d"
 metafile = true
@@ -252,7 +256,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
-hash = "316b9d20a315707d0a7ca9bbb11a1151e444ca39a7f353f4a04282203613c09a"
+hash = "92a607d137ec703843418c3fb93be516ff19c47a225a248006d23bd8d138701a"
 metafile = true
 
 [[files]]
